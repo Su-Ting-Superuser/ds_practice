@@ -36,11 +36,18 @@ def get_median(X: np.array):
     Returns:
         me(np.float): median value of the variable
     """
-    #  TODO:  Code here
+
     me = None
-
+    n = X.size
+    X = np.sort(X)
+    # if the size of X is even
+    if n % 2 == 0:
+        _middle_two = [X[int(n / 2 - 1)], X[int(n / 2)]]
+        me = np.mean(_middle_two)
+    # if the size of X is odd
+    if n % 2 != 0:
+        me = X[int((n - 1) / 2)]
     return me
-
 
 def get_mode(X: np.array):
     """
