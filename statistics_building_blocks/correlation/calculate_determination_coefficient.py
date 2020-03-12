@@ -3,7 +3,7 @@ import numpy as np
 
 def get_r2_score(Y: np.array, Y_pred: np.array):
     """
-    calculate the coefficient of determination(r2) of the regression
+    calculate the coefficient of determination(r2) of the regression(doesn't have to be linear)
 
     SStot = sum[(y - y_bar) ^ 2]
     SSreg = sum[(y_pred - y_bar) ^ 2]
